@@ -14,6 +14,6 @@ class CommentRepository extends EntityRepository
     {
         $em = $this->getEntityManager();
         $em->persist($comment);
-        $em->flush();
+        $em->flush($comment);
     }
 }

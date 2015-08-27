@@ -44,7 +44,7 @@ class PostRepository extends EntityRepository
     {
         $em = $this->getEntityManager();
         $em->persist($post);
-        $em->flush();
+        $em->flush($post);
     }
 
     /**
@@ -54,6 +54,6 @@ class PostRepository extends EntityRepository
     {
         $em = $this->getEntityManager();
         $em->remove($post);
-        $em->flush();
+        $em->flush($post);
     }
 }
